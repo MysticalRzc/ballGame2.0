@@ -1,27 +1,38 @@
 package communication.udpCommunication;
 
+public class UdpCommunnication {
 
-public class UdpCommunnication{
+	final private Thread reTh;
+	final private Thread seTh;
 	
-	public Thread reTh;
-	public Thread seTh;
-	
+	static String sendMess = "";
+
 	public UdpCommunnication() {
 		super();
-		this.reTh = new Thread(new UdpReceiveThread(),"receiveThread");
-		this.seTh = new Thread(new UdpSendThread("127.0.0.1", 30000),"sendThread");
+		this.reTh = new Thread(new UdpReceiveThread(), "receiveThread");
+		this.seTh = new Thread(new UdpSendThread("127.0.0.1", 5678),
+				"sendThread");
 	}
-	
-	synchronized public void receive(){
-		System.out.println("receive is starting");
+
+	public void receive() {
 		reTh.start();
-		System.out.println("receive is started");
 	}
-	
-	synchronized public void send(String str)
-	{
-		System.out.println("send is starting");
-		seTh.start();
-		System.out.println("send is started");
+
+	public void send(String mess) {
+		if (!seTh.isAlive())
+			seTh.start();
+		sendMess = mess;
+	}
+
+	public void send(String mess, String address, int port) {
+		if (!seTh.isAlive())
+			seTh.start();
+		sendMess = mess;
+
+	}
+
+	static private void setMessage(String message) {
+		System.out.println(message.substring(0, 8));
+		System.out.println(message.substring(8));
 	}
 }

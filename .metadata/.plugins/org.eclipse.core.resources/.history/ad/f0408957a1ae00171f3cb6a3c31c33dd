@@ -1,0 +1,18 @@
+package main;
+
+import java.net.Socket;
+
+import messageBuffer.MessageBuffer;
+import ClientThread.ClientThread;
+
+public class GameServer {
+	final public static MessageBuffer messBuff = new MessageBuffer();
+	public static void BuildClientThread(Socket socket)
+	{
+		ClientThread clientTh= new ClientThread(socket);
+	}
+	private static void main(String[] args)
+	{
+		
+	}
+}

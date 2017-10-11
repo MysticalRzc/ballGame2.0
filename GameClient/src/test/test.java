@@ -17,7 +17,7 @@ public class test {
 		UdpCommunnication udpCom = new UdpCommunnication();
 		
 		udpCom.send("");
-		udpCom.receive();
+		//udpCom.receive();
 		
 		Thread.sleep(5000);
 		

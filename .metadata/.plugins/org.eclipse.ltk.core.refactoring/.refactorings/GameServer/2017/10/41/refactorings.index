@@ -9,3 +9,7 @@
 1507625840284	Delete element
 1507634081303	Rename package 'messageCach'
 1507634094183	Move package
+1507734723971	Delete elements
+1507734867304	Copy package
+1507736548203	Rename type 'GameClient'
+1507736671904	Rename package 'communication.TcpCommunication'

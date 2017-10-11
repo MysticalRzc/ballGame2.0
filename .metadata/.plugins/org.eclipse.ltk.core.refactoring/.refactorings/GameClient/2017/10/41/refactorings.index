@@ -8,3 +8,8 @@
 1507641762042	Rename type 'messageBuffer'
 1507645429075	Move compilation unit
 1507646262392	Rename type 'GameServer'
+1507734552848	Delete element
+1507734728900	Copy packages
+1507734758977	Copy package
+1507734862078	Move package
+1507736681421	Rename package 'communication.TcpCommunication'

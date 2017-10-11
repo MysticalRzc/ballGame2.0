@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="35" version="2.0">
+<workbench progressCount="31" version="2.0">
 <workbenchAdvisor/>
-<window height="646" maximized="true" width="1152" x="214" y="80">
+<window height="698" maximized="true" width="1187" x="69" y="-20">
 <fastViewData fastViewLocation="1024">
 <orientation position="512" view="org.eclipse.ui.console.ConsoleView"/>
 </fastViewData>
@@ -42,23 +42,31 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpCommunnication.java" partName="UdpCommunnication.java" path="C:/Users/Mystical/Desktop/ballGame/GameClient/src/communication/udpCommunication/UdpCommunnication.java" title="UdpCommunnication.java" tooltip="GameClient/src/communication/udpCommunication/UdpCommunnication.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GameClient/src/communication/udpCommunication/UdpCommunnication.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="370" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameServer.java" partName="GameServer.java" path="C:/Users/Mystical/Desktop/ballGame/GameServer/src/main/GameServer.java" title="GameServer.java" tooltip="GameServer/src/main/GameServer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GameServer/src/main/GameServer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="618" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpSendThread.java" partName="UdpSendThread.java" path="C:/Users/Mystical/Desktop/ballGame/GameClient/src/communication/udpCommunication/UdpSendThread.java" title="UdpSendThread.java" tooltip="GameClient/src/communication/udpCommunication/UdpSendThread.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GameClient/src/communication/udpCommunication/UdpSendThread.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="317"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameClient.java" partName="GameClient.java" path="C:/Users/Mystical/Desktop/ballGame/GameClient/src/main/GameClient.java" title="GameClient.java" tooltip="GameClient/src/main/GameClient.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GameClient/src/main/GameClient.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="465" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpCommunnication.java" partName="UdpCommunnication.java" path="C:/Users/Mystical/Desktop/ballGame/GameClient/src/communication/udpCommunication/UdpCommunnication.java" title="UdpCommunnication.java" tooltip="GameClient/src/communication/udpCommunication/UdpCommunnication.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GameClient/src/communication/udpCommunication/UdpCommunnication.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="120" selectionOffset="525" selectionTopPixel="120"/>
 </editor>
 </editors>
 <views>
 <view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser"/>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy"/>
 <view id="uky.article.imageviewer.views.ImageView" partName="Image Preview">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView:Console View #2" partName="Console">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
@@ -78,7 +86,7 @@
 <expanded>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (2 items)"/>
+<category IMemento.internal.id="Warnings (13 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -381,11 +389,12 @@
 <perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.console.ConsoleView:Console View #2"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.springframework.ide.eclipse.ui.navigator.springExplorer"/>
 <fastViewBars/>
@@ -411,7 +420,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.21549815" ratioLeft="292" ratioRight="1063" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.61513156" ratioLeft="374" ratioRight="234" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.67269737" ratioLeft="409" ratioRight="199" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -425,6 +434,20 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@10534286" ratio="0.5" ratioLeft="533" ratioRight="533" relationship="2" relative="bottom">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView:Console View #1" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2c4c9e77" ratio="0.5" ratioLeft="533" ratioRight="533" relationship="2" relative="bottom">
+<folder activePageID="org.eclipse.ui.console.ConsoleView:Console View #2" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView:Console View #2" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -454,165 +477,172 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameServer/src/main/GameServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameServer/src/ClientThread/ClientThread.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/test/test.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/messageBuffer/MessageBuffer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/main/GameClient.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameServer/src/test/test.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameServer/src/main/GameServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/main/GameClient.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/tcpCommunication/TcpCommunication.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameServer/src/communication/tcpCommunication/TcpCommunication.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=GameServer/C:\/MyProgram\/MyEclipse\/Common\/binary\/com.sun.java.jdk.win32.x86_64_1.6.0.013\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameServer/src/communication/tcpCommunication/TcpAcceptingThread.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/udpCommunication/UdpCommunnication.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameServer/src/communication/udpCommunication/UdpCommunnication.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/udpCommunication/UdpSendThread.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/udpCommunication/UdpReceiveThread.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/udpCommunication/UdpCommunnication.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/udpCommunication/UdpSendThread.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=udpTest/C:\/MyProgram\/MyEclipse\/Common\/binary\/com.sun.java.jdk.win32.x86_64_1.6.0.013\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/main/GameClient.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/tcpCommunication/TcpCommunnication.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GameClient/src/communication/udpCommunication/UdpCommunnication.java"/>
 </editors>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="127" y="0"/>
+<item historyLabel="ClientThread.java" index="1">
+<position info="not_deleted" x="275" y="0"/>
 </item>
-<item historyLabel="Thread.class" index="5">
-<position info="not_deleted" x="4145" y="6"/>
+<item historyLabel="GameServer.java" index="0">
+<position info="not_deleted" x="330" y="0"/>
 </item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="127" y="0"/>
+<item historyLabel="test.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UdpReceiveThread.java" index="2">
-<position info="not_deleted" x="256" y="9"/>
+<item historyLabel="GameClient.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="234" y="0"/>
+<item historyLabel="test.java" index="2">
+<position info="not_deleted" x="247" y="0"/>
 </item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="342" y="0"/>
+<item historyLabel="test.java" index="4">
+<position info="not_deleted" x="247" y="0"/>
 </item>
-<item historyLabel="UdpReceiveThread.java" index="2">
-<position info="not_deleted" x="597" y="0"/>
+<item historyLabel="GameClient.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="342" y="0"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="361" y="0"/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="394" y="20"/>
-</item>
-<item historyLabel="UdpReceiveThread.java" index="2">
-<position info="not_deleted" x="597" y="0"/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="234" y="0"/>
-</item>
-<item historyLabel="MessageBuffer.java" index="1">
-<position info="not_deleted" x="251" y="0"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="394" y="20"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="523" y="0"/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="597" y="0"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="619" y="0"/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="807" y="19"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="619" y="0"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="613" y="0"/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="465" y="0"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="525" y="91"/>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="635" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MessageBuffer.java" index="1">
-<position info="not_deleted" x="584" y="0"/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="505" y="0"/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
+<item historyLabel="GameServer.java" index="5">
 <position/>
 </item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="525" y="91"/>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="805" y="0"/>
 </item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="187" y="0"/>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="628" y="0"/>
 </item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="86" y="0"/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position/>
-</item>
-<item historyLabel="MessageBuffer.java" index="1">
-<position info="not_deleted" x="584" y="0"/>
-</item>
-<item historyLabel="UdpCommunnication.java" index="3">
-<position info="not_deleted" x="160" y="0"/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="505" y="0"/>
-</item>
-<item historyLabel="test.java" index="0">
-<position/>
-</item>
-<item historyLabel="test.java" index="0">
-<position/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="237" y="0"/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position info="not_deleted" x="788" y="0"/>
-</item>
-<item historyLabel="UdpSendThread.java" index="4">
-<position info="not_deleted" x="365" y="0"/>
-</item>
-<item historyLabel="test.java" index="0">
-<position info="not_deleted" x="237" y="0"/>
-</item>
-<item historyLabel="MessageBuffer.java" index="1">
-<position info="not_deleted" x="584" y="0"/>
-</item>
-<item historyLabel="TcpCommunnication.java" index="7">
+<item historyLabel="TcpCommunication.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UdpCommunnication.java" index="8">
-<position info="not_deleted" x="479" y="0"/>
+<item historyLabel="TcpCommunication.java" index="7">
+<position info="not_deleted" x="1699" y="0"/>
 </item>
-<item historyLabel="UdpSendThread.java" index="4">
+<item historyLabel="TcpCommunication.java" index="7">
+<position info="not_deleted" x="1464" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="402" y="0"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="268" y="72"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="546" y="0"/>
+</item>
+<item historyLabel="TcpCommunication.java" index="8">
+<position info="not_deleted" x="971" y="0"/>
+</item>
+<item historyLabel="Thread.class" index="9">
+<position info="not_deleted" x="22425" y="5"/>
+</item>
+<item historyLabel="TcpCommunication.java" index="8">
+<position info="not_deleted" x="971" y="0"/>
+</item>
+<item historyLabel="TcpCommunication.java" index="8">
+<position info="not_deleted" x="964" y="0"/>
+</item>
+<item historyLabel="TcpCommunication.java" index="8">
+<position info="not_deleted" x="319" y="0"/>
+</item>
+<item historyLabel="TcpAcceptingThread.java" index="10">
+<position info="not_deleted" x="173" y="18"/>
+</item>
+<item historyLabel="TcpAcceptingThread.java" index="10">
+<position info="not_deleted" x="594" y="0"/>
+</item>
+<item historyLabel="TcpAcceptingThread.java" index="10">
+<position info="not_deleted" x="751" y="0"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="628" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="546" y="0"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="628" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="546" y="0"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="628" y="0"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="628" y="0"/>
+</item>
+<item historyLabel="UdpCommunnication.java" index="11">
+<position info="not_deleted" x="651" y="0"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="342" y="74"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="546" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position/>
+</item>
+<item historyLabel="UdpCommunnication.java" index="12">
+<position info="not_deleted" x="663" y="7"/>
+</item>
+<item historyLabel="UdpSendThread.java" index="13">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="UdpCommunnication.java" index="8">
-<position info="not_deleted" x="479" y="0"/>
+<item historyLabel="UdpReceiveThread.java" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position/>
+</item>
+<item historyLabel="UdpReceiveThread.java" index="14">
+<position info="not_deleted" x="490" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="554" y="111"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="628" y="0"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="554" y="133"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="583" y="0"/>
+</item>
+<item historyLabel="UdpCommunnication.java" index="15">
+<position info="not_deleted" x="525" y="120"/>
+</item>
+<item historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="539" y="20"/>
+</item>
+<item historyLabel="GameServer.java" index="5">
+<position info="not_deleted" x="618" y="0"/>
+</item>
+<item active="true" historyLabel="GameClient.java" index="6">
+<position info="not_deleted" x="539" y="20"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -624,10 +654,10 @@
 <trimItem IMemento.internal.id="left"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
 <trimItem IMemento.internal.id="right"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@5b3353f"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@2c4c9e77"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -636,39 +666,55 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpSendThread.java" tooltip="GameClient/src/communication/udpCommunication/UdpSendThread.java">
-<persistable path="/GameClient/src/communication/udpCommunication/UdpSendThread.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpCommunnication.java" tooltip="GameClient/src/communication/udpCommunication/UdpCommunnication.java">
 <persistable path="/GameClient/src/communication/udpCommunication/UdpCommunnication.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpCommunnication.java" tooltip="GameClient/src/communication/tcpCommunication/TcpCommunnication.java">
-<persistable path="/GameClient/src/communication/tcpCommunication/TcpCommunnication.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameClient.java" tooltip="GameClient/src/main/GameClient.java">
-<persistable path="/GameClient/src/main/GameClient.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpReceiveThread.java" tooltip="GameClient/src/communication/udpCommunication/UdpReceiveThread.java">
 <persistable path="/GameClient/src/communication/udpCommunication/UdpReceiveThread.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpSendThread.java" tooltip="GameClient/src/communication/tcpCommunication/TcpSendThread.java">
-<persistable path="/GameClient/src/communication/tcpCommunication/TcpSendThread.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpSendThread.java" tooltip="GameClient/src/communication/udpCommunication/UdpSendThread.java">
+<persistable path="/GameClient/src/communication/udpCommunication/UdpSendThread.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpCommunnication.java" tooltip="GameServer/src/communication/udpCommunication/UdpCommunnication.java">
+<persistable path="/GameServer/src/communication/udpCommunication/UdpCommunnication.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpAcceptingThread.java" tooltip="GameServer/src/communication/tcpCommunication/TcpAcceptingThread.java">
+<persistable path="/GameServer/src/communication/tcpCommunication/TcpAcceptingThread.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Thread.class" tooltip="java.lang.Thread">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=GameServer/C:\/MyProgram\/MyEclipse\/Common\/binary\/com.sun.java.jdk.win32.x86_64_1.6.0.013\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpCommunication.java" tooltip="GameServer/src/communication/tcpCommunication/TcpCommunication.java">
+<persistable path="/GameServer/src/communication/tcpCommunication/TcpCommunication.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpCommunication.java" tooltip="GameClient/src/communication/tcpCommunication/TcpCommunication.java">
+<persistable path="/GameClient/src/communication/tcpCommunication/TcpCommunication.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameClient.java" tooltip="GameClient/src/main/GameClient.java">
+<persistable path="/GameClient/src/main/GameClient.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameServer.java" tooltip="GameServer/src/main/GameServer.java">
+<persistable path="/GameServer/src/main/GameServer.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="test.java" tooltip="GameServer/src/test/test.java">
 <persistable path="/GameServer/src/test/test.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpReceiveThread.java" tooltip="GameClient/src/communication/tcpCommunication/TcpReceiveThread.java">
-<persistable path="/GameClient/src/communication/tcpCommunication/TcpReceiveThread.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="test.java" tooltip="GameClient/src/test/test.java">
 <persistable path="/GameClient/src/test/test.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UdpSendThread.java" tooltip="GameServer/src/communication/udpCommunication/UdpSendThread.java">
-<persistable path="/GameServer/src/communication/udpCommunication/UdpSendThread.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClientThread.java" tooltip="GameServer/src/ClientThread/ClientThread.java">
+<persistable path="/GameServer/src/ClientThread/ClientThread.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpReceiveThread.java" tooltip="GameClient/src/communication/TcpCommunication/TcpReceiveThread.java">
+<persistable path="/GameClient/src/communication/TcpCommunication/TcpReceiveThread.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TcpCommunication.java" tooltip="GameClient/src/communication/TcpCommunication/TcpCommunication.java">
+<persistable path="/GameClient/src/communication/TcpCommunication/TcpCommunication.java"/>
 </file>
 </mruList>
 </workbench>

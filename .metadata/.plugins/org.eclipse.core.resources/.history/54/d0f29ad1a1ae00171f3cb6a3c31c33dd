@@ -1,0 +1,14 @@
+package main;
+
+import communication.tcpCommunication.TcpCommunication;
+
+import messageBuffer.MessageBuffer;
+
+public class GameClient {
+	final public static MessageBuffer messBuff = new MessageBuffer();
+	final private static TcpCommunication tcpComm = new TcpCommunication();
+	public static void main(String[] args) {
+		tcpComm.ClientBuild();
+	}
+	
+}

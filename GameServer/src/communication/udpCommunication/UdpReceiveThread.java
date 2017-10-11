@@ -5,6 +5,8 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
+import main.GameServer;
+
 public class UdpReceiveThread implements Runnable{
 
 	@Override
@@ -12,7 +14,7 @@ public class UdpReceiveThread implements Runnable{
 		try {
 			
 			byte[] buf=new byte[1024*64];  
-			DatagramSocket socket = new DatagramSocket();;
+			DatagramSocket socket = new DatagramSocket(5678);;
 			DatagramPacket pack=new DatagramPacket(buf,buf.length);   
 			
 			while(true)
@@ -20,6 +22,7 @@ public class UdpReceiveThread implements Runnable{
 				System.out.println("is waiting...");
 				socket.receive(pack);
 				System.out.println("receive : " +new String(buf,0,pack.getLength()));
+				UdpCommunnication.setMessage(new String(buf,0,pack.getLength()));
 			}
 			
 		} catch (SocketException e) {
