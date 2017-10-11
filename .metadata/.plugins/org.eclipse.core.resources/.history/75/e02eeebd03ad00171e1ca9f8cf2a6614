@@ -1,0 +1,10 @@
+package communication.udpCommunication;
+
+public class UdpSendThread implements Runnable{
+
+	@Override
+	public void run() {
+		
+	}
+
+}

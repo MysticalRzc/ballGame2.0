@@ -1,0 +1,19 @@
+
+public class main {
+
+	/**
+	 * @param args
+	 * @throws InterruptedException 
+	 */
+	public static void main(String[] args) throws InterruptedException {
+		Client c = new Client();
+		Server s = new Server();
+		c.currentThread().setName("client");
+		s.currentThread().setName("server");
+		c.start();
+		s.start();
+		while(true)
+		System.out.println(s.isAlive());
+	}
+
+}

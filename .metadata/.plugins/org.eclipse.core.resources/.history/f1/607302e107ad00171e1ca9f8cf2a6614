@@ -1,0 +1,18 @@
+package communication.udpCommunication;
+
+
+public class UdpCommunnication{
+	
+	UdpReceiveThread reTh;
+	UdpSendThread seTh;
+	
+
+	
+	public UdpCommunnication() {
+		super();
+		this.reTh = reTh;
+		this.seTh = seTh;
+	}
+	
+
+}

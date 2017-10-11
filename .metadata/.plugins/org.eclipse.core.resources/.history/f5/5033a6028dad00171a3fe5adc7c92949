@@ -1,0 +1,28 @@
+import java.net.SocketException;
+
+public class main {
+
+	/**
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public static void main(String[] args) throws InterruptedException {
+
+		try {
+			new EchoServer().service();
+			new EchoClient().talk();
+			
+		} catch (SocketException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// Client c = new Client();
+		// Server s = new Server();
+		// c.currentThread().setName("client");
+		// s.currentThread().setName("server");
+		// c.start();
+		// s.start();
+	}
+
+}

@@ -1,0 +1,26 @@
+import java.io.IOException;
+import java.io.PrintStream;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+
+
+public class Server extends Thread{
+
+	@Override
+	public void run()
+	{
+		try {
+			DatagramSocket socket = new DatagramSocket();
+			DatagramPacket outPacket = new DatagramPacket(new byte[0],0,InetAddress.getByName("127.0.0.1"),30000);
+			
+			
+		} catch (SocketException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

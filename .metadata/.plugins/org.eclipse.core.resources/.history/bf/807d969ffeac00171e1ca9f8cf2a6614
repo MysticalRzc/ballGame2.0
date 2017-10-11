@@ -1,0 +1,53 @@
+package communication.udpCommunication;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+
+public class UdpCommunnication extends Thread{
+	
+	private String address;
+	private int port;
+	private String message;
+	
+	public UdpCommunnication(String address, int port) {
+		super();
+		this.address = address;
+		this.port = port;
+		test();
+	}
+	
+	private void test(){
+		message="test message";
+		
+	}
+	@Override
+	public void run() {
+		int i = 0;
+		while(true)
+		{
+			try {
+				byte[] data = message.getBytes();
+				DatagramPacket pack = new DatagramPacket(data, data.length,InetAddress.getByName("192.168.136.222"), 7879);
+				DatagramSocket socket = new DatagramSocket();
+			
+				socket.send(pack);
+				
+				System.out.println("message has been send");
+
+			
+			
+			} catch (SocketException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+	}
+	
+
+}

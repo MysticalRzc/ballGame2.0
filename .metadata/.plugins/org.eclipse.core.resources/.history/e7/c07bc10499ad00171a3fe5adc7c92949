@@ -1,0 +1,23 @@
+package communication.udpCommunication;
+
+
+public class UdpCommunnication{
+	
+	public Thread reTh;
+	public Thread seTh;
+	
+	public UdpCommunnication(String address, int port) {
+		super();
+		this.reTh = new Thread(new UdpReceiveThread());
+		this.seTh = new Thread(new UdpSendThread(address, port));
+	}
+	
+	public void receive(){
+		reTh.start();
+	}
+	
+	public void send(String str)
+	{
+		seTh.start();
+	}
+}

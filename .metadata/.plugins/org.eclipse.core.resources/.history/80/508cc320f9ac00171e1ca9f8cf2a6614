@@ -1,0 +1,5 @@
+package communication.udpCommunication;
+
+public class UdpThread {
+
+}

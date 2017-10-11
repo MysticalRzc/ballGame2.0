@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.io.PrintStream;
+import java.net.DatagramSocket;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+
+
+public class Server extends Thread{
+
+	@Override
+	public void run()
+	{
+		try {
+			DatagramSocket socket = new DatagramSocket();
+			
+			
+			
+		} catch (SocketException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

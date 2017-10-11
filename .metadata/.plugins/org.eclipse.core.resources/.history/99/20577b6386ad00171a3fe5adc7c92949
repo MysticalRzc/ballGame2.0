@@ -1,0 +1,22 @@
+
+package test;
+
+import org.junit.Test;
+
+import communication.udpCommunication.UdpCommunnication;
+
+public class test {
+	
+	//@Test
+	//public void test() throws InterruptedException
+	public static void main(String[] args) throws InterruptedException
+	{
+		UdpCommunnication udpCom = new UdpCommunnication("192.168.1.100", 5678);
+
+		udpCom.send("");
+		udpCom.receive();
+		
+		udpCom.seTh.join();
+		udpCom.reTh.join();
+	}
+}

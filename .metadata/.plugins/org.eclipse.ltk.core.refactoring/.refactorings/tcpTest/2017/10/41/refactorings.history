@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;udpTest/src&apos;&#x0D;&#x0A;- Original project: &apos;tcpTest&apos;&#x0D;&#x0A;- Destination element: &apos;udpTest/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Server.java&#x0D;&#x0A;     Client.java&#x0D;&#x0A;     main.java" description="Copy compilation units" destination="=udpTest/src" element1="/src&lt;{Server.java" element2="/src&lt;{Client.java" element3="/src&lt;{main.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1507619213585" units="3" version="1.0"/>
+</session>

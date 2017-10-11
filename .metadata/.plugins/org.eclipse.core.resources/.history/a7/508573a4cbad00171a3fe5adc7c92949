@@ -1,0 +1,28 @@
+package communication.udpCommunication;
+
+public class UdpCommunnication {
+
+	final private Thread reTh;
+	final private Thread seTh;
+
+	public UdpCommunnication() {
+		super();
+		this.reTh = new Thread(new UdpReceiveThread(), "receiveThread");
+		this.seTh = new Thread(new UdpSendThread("127.0.0.1", 5678),
+				"sendThread");
+	}
+
+	public void receive() {
+		reTh.start();
+	}
+
+	public void send(String str) {
+		seTh.start();
+	}
+
+	static public void setMessage(String message ) {
+		String[] mess = message.split(message, ':');
+		System.out.println(mess[0]);
+		System.out.println(mess[1]);
+	}
+}
