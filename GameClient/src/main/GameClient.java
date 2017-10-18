@@ -10,15 +10,9 @@ public class GameClient {
 	final private static TcpCommunication tcpComm = new TcpCommunication();
 	final private static UdpCommunnication udpComm = new UdpCommunnication();
 	
-	
-	public static void main(String[] args) {
-//		tcpComm.ClientBuild();
-		udpComm.send("00000000hello is Server");
-		udpComm.receive();
-		while(true)
-		{
-			System.out.println(messBuff.getSize());
-		}
+	public static void StartClient()
+	{
+		
 	}
-	
+
 }

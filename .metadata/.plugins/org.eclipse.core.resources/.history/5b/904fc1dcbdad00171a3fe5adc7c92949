@@ -1,8 +1,0 @@
-package messageBuffer;
-
-import java.util.Map;
-
-public class messageBuffer {
-	private Map messageBuffer = new HashMap<String,Queue>();
-
-}

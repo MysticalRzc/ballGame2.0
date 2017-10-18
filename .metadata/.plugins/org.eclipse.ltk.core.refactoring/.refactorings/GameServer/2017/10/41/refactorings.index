@@ -13,3 +13,5 @@
 1507734867304	Copy package
 1507736548203	Rename type 'GameClient'
 1507736671904	Rename package 'communication.TcpCommunication'
+1507793705431	Rename type 'UdpSendThread'
+1507795501349	Copy package

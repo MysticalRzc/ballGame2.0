@@ -19,12 +19,15 @@ public class ClientThread extends Thread {
 		this.tcpComm = new TcpCommunication(socket);
 		this.chart();
 	}
+	public ClientThread()
+	{
+		connectByUdp = true;
+	}
 
 	public void chart() {
 		if (connectByUdp) {
 		} else {
-			tcpComm.sendMessage("你好这里是服务器�");
-//			System.out.println(">>>");
+			tcpComm.sendMessage("request0Hello this is Server");
 		}
 	}
 }

@@ -1,0 +1,25 @@
+
+public class test {
+	public Object lock;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public void thread()
+	{
+		Thread th = new Thread(){
+			@Override
+			public void run()
+			{
+				synchronized (lock) {
+					while(true)
+					{
+						System.out.println(">");
+					}
+				}
+			}
+		};
+	}
+	
+}

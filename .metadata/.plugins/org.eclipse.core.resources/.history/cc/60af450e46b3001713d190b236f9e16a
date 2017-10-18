@@ -1,0 +1,21 @@
+package test;
+
+import java.util.Scanner;
+
+public class String {
+	@Test
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		while (true) {
+			java.lang.String com = sc.nextLine();
+			int id = 1;
+			switch (id) {
+			case 1:
+				System.out.println(">>");
+			case 2:
+				System.out.println(">>");
+			}
+		}
+	}
+}

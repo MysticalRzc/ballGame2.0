@@ -1,0 +1,10 @@
+package crash;
+
+public class Crash {
+	
+	public static void crash(Ball ball1,Ball ball2)
+	{
+		
+	}
+	
+}

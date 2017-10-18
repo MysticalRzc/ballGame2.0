@@ -5,23 +5,30 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-import main.GameServer;
 
-public class UdpReceiveThread implements Runnable{
+public class UdpReceiveThread extends Thread{
 
+	private int port;
+	
+	public UdpReceiveThread(int port)
+	{
+		super();
+		this.port = port;
+		this.setName("UdpReceiveThread");
+	}
 	@Override
 	public void run() {
 		try {
 			
 			byte[] buf=new byte[1024*64];  
-			DatagramSocket socket = new DatagramSocket(5678);;
+			DatagramSocket socket = new DatagramSocket(port);;
 			DatagramPacket pack=new DatagramPacket(buf,buf.length);   
 			
-			while(true)
+			while(!this.isInterrupted())
 			{
 				System.out.println("is waiting...");
 				socket.receive(pack);
-				System.out.println("receive : " +new String(buf,0,pack.getLength()));
+//				System.out.println("receive : " +new String(buf,0,pack.getLength()));
 				UdpCommunnication.setMessage(new String(buf,0,pack.getLength()));
 			}
 			

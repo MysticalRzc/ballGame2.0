@@ -1,0 +1,13 @@
+package main;
+
+import messageBuffer.MessageArouse;
+
+public class GameServerArouse extends MessageArouse {
+
+	@Override
+	public void Arouse(String mesId) {
+		if(mesId.compareTo("Client") == 0)
+			GameServer.BuildClientThread()
+	}
+
+}
