@@ -1,3 +1,9 @@
 1508251606574	Rename package 'test'
 1508251791844	Rename type 'test'
 1508332056935	Copy package
+1508400098370	Rename type 'CLientArouse'
+1508421579389	Copy compilation unit
+1508425901479	Rename package 'Mode'
+1508427922885	Move compilation unit
+1508429078402	Rename type 'command'
+1508431182583	Rename type 'ClientArouse'

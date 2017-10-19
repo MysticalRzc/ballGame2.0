@@ -1,0 +1,11 @@
+package main;
+
+import messageBuffer.MessageArouse;
+
+public class CLientArouse extends MessageArouse {
+	@Override
+	public void Arouse(String mesId) {
+
+	}
+
+}

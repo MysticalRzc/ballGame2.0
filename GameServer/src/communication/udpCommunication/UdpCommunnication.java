@@ -1,6 +1,5 @@
 package communication.udpCommunication;
 
-import java.net.SocketException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,25 +15,25 @@ public class UdpCommunnication {
 		super();
 	}
 
-	public UdpCommunnication(String address, int port){
+	public UdpCommunnication(String address, int sendPort, int recePort) {
 		super();
-		try{
-			this.checkAddPort(address, port);
-			this.reTh = new UdpReceiveThread(port);
-			this.seFun = new UdpSendFunction(address, port);
-		}catch (Exception e) {
+		try {
+			this.checkAddPort(address, sendPort, recePort);
+			this.reTh = new UdpReceiveThread(recePort);
+			this.seFun = new UdpSendFunction(address, sendPort);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void buildUdpCommunication(String address, int port){
-		try{
-			this.checkAddPort(address, port);
-			if(this.reTh!=null && this.reTh.isAlive()==true)
+	public void buildUdpCommunication(String address, int sendPort, int recePort) {
+		try {
+			this.checkAddPort(address, sendPort, recePort);
+			if (this.reTh != null && this.reTh.isAlive() == true)
 				this.reTh.interrupt();
-			this.reTh = new UdpReceiveThread(port);
-			this.seFun = new UdpSendFunction(address, port);
-		}catch (Exception e) {
+			this.reTh = new UdpReceiveThread(recePort);
+			this.seFun = new UdpSendFunction(address, sendPort);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -44,11 +43,13 @@ public class UdpCommunnication {
 	}
 
 	public void send(String mess) {
-		if (seFun != null)
+		if (seFun != null) {
 			seFun.sendMessage(mess);
-		else
+			System.out.println("UdpComm Send :" + mess);
+		} else
 			try {
-				throw new Exception("udpCommnication need build, nullPointException");
+				throw new Exception(
+						"udpCommnication need build, nullPointException");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -59,19 +60,21 @@ public class UdpCommunnication {
 			seFun.sendMessage(mess);
 		else
 			try {
-				throw new Exception("udpCommnication need build, nullPointException");
+				throw new Exception(
+						"udpCommnication need build, nullPointException");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 	}
 
 	static protected void setMessage(String message) { // kid visited only
-		GameServer.messBuff.setMessage(message.substring(0, 8), message.substring(8));
+		GameServer.messBuff.setMessage(message.substring(0, 8),
+				message.substring(8));
 	}
-	
-	public void checkAddPort(String address,int port) throws Exception
-	{
-		if (port < 0 || port >= 65535)
+
+	public void checkAddPort(String address, int sendPort, int recePort)
+			throws Exception {
+		if ((sendPort < 0 || sendPort >= 65535) && (recePort < 0 || recePort >= 65535))
 			throw new Exception("address error!");
 		Pattern p = Pattern.compile(regEx);
 		Matcher m = p.matcher(address);

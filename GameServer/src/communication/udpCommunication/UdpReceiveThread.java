@@ -31,7 +31,6 @@ public class UdpReceiveThread extends Thread{
 //				System.out.println("receive : " +new String(buf,0,pack.getLength()));
 				UdpCommunnication.setMessage(new String(buf,0,pack.getLength()));
 			}
-			
 		} catch (SocketException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

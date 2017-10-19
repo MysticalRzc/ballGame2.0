@@ -13,34 +13,27 @@ import communication.udpCommunication.UdpCommunnication;
 
 public class GameServer {
 
-	final public static MessageBuffer messBuff =  new MessageBuffer(new GameServerArouse());
+	final public static MessageBuffer messBuff = new MessageBuffer(
+			new GameServerArouse());
 	final private static TcpCommunication tcpComm = new TcpCommunication();
 	final private static UdpCommunnication udpComm = new UdpCommunnication();
 	private static boolean isUdpCommunication = true;
 
-	
-	private static String address = null;
-	private static int port = 12633;
-	private static int serverStap = 0; // 记录服务器运行到第几步
-	
+	private static String address = "127.0.0.1";
+	private static int sendPort = 12666;
+	private static int recePort = 12999;
+	private static int serverStap = 1; // 记录服务器运行到第几步
+
 	public static void StartServer() {
 		if (serverStap == 1) {
-			if (isUdpCommunication) {
-				udpComm.buildUdpCommunication(address, port);
-				udpComm.receive();
-				Thread th = new Thread() {
-					@Override
-					public void run() {
-						while (true) {
-							System.out.println(">");
-						}
-					}
-				};
-				th.start();
-			}
-		}
-		else
+			udpComm.receive();
+			serverStap = 2;
+		} else
 			System.out.println("server is not build");
+	}
+
+	public static void BuildServerByDefault() {
+		udpComm.buildUdpCommunication(address, sendPort, recePort);
 	}
 
 	public static void BuildServer() {
@@ -58,13 +51,15 @@ public class GameServer {
 			System.out.println("Error address Please Check and set again");
 		}
 
-		System.out.println("Set port");
+		System.out.println("Set sendPort and recePort");
 		while (true) {
-			String str = sc.nextLine();
-
+			String str1 = sc.nextLine();
+			String str2 = sc.nextLine();
 			try {
-				port = Integer.parseInt(str);
-				if (port < 0 || port >= 65535)
+				sendPort = Integer.parseInt(str1);
+				recePort = Integer.parseInt(str2);
+				if ((sendPort < 0 || recePort >= 65535)
+						&& (sendPort < 0 || recePort >= 65535))
 					throw new Exception();
 				break;
 			} catch (Exception e) {
@@ -72,13 +67,15 @@ public class GameServer {
 						.println("Error port must between 0 and 65535,Please again");
 			}
 		}
-		serverStap=1;
+		serverStap = 1;
+		udpComm.buildUdpCommunication(address, sendPort, recePort);
 		System.out.println("Build Server successful!!");
 	}
 
 	public static void BuildClientThread(Socket socket) {
 		ClientThread clientTh = new ClientThread(socket);
 	}
+
 	public static void BuildClientThread() {
 		ClientThread clientTh = new ClientThread();
 	}

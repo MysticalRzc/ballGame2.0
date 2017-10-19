@@ -3,6 +3,8 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import main.GameServerArouse;
+import messageBuffer.MessageArouse;
 import messageBuffer.MessageBuffer;
 
 import communication.udpCommunication.UdpCommunnication;
@@ -35,19 +37,19 @@ public class test {
 	}
 
 	// @Test
-	public void testMessageBuffer() throws InterruptedException {
-		MessageBuffer mesBuf = new MessageBuffer();
-		UdpCommunnication udpCom = new UdpCommunnication();
-
-		// udpCom.send("");
-		udpCom.receive();
-
-		Thread.sleep(5000);
-
-		System.out.println(mesBuf.getSize());
-		// mesBuf.setMessage("ball", "ballMessage");
-		// System.out.println(mesBuf.getMessage("ball"));
-	}
+//	public void testMessageBuffer() throws InterruptedException {
+//		MessageBuffer mesBuf = new MessageBuffer(new GameServerArouse());
+//		UdpCommunnication udpCom = new UdpCommunnication();
+//
+//		// udpCom.send("");
+//		udpCom.receive();
+//
+//		Thread.sleep(5000);
+//
+//		System.out.println(mesBuf.getSize());
+//		// mesBuf.setMessage("ball", "ballMessage");
+//		// System.out.println(mesBuf.getMessage("ball"));
+//	}
 
 	// @Test
 	public void testUdp() throws InterruptedException {

@@ -31,4 +31,7 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="messageBuffer.MessageBuffer"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="messageBuffer.MessageArouse"/>
+<fullyQualifiedTypeName name="main.GameServerArouse"/>
 </qualifiedTypeNameHistroy>

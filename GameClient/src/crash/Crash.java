@@ -1,6 +1,6 @@
 package crash;
 
-import Mode.Ball;
+import entity.Ball;
 
 public class Crash {
 	

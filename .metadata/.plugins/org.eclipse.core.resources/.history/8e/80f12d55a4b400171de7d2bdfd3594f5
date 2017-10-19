@@ -1,0 +1,24 @@
+package main;
+
+import messageBuffer.MessageBuffer;
+
+import communication.tcpCommunication.TcpCommunication;
+import communication.udpCommunication.UdpCommunnication;
+
+public class GameClient {
+	final public static MessageBuffer messBuff = new MessageBuffer(new ClientArouse());
+	final private static TcpCommunication tcpComm = new TcpCommunication();
+	final private static UdpCommunnication udpComm = new UdpCommunnication();
+
+	private static String address = null;
+	private static int port = 12633;
+	
+	public static void buildClient() {
+
+	}
+
+	public static void StartClient() {
+
+	}
+
+}

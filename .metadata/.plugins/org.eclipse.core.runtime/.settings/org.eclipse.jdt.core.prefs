@@ -1,4 +1,4 @@
-#Wed Oct 18 23:11:43 CST 2017
+#Thu Oct 19 10:27:46 CST 2017
 org.eclipse.jdt.core.codeComplete.fieldSuffixes=
 org.eclipse.jdt.core.codeComplete.localSuffixes=
 org.eclipse.jdt.core.compiler.compliance=1.6
@@ -10,10 +10,10 @@ org.eclipse.jdt.core.codeComplete.staticFinalFieldPrefixes=
 org.eclipse.jdt.core.codeComplete.fieldPrefixes=
 org.eclipse.jdt.core.codeComplete.argumentSuffixes=
 org.eclipse.jdt.core.codeComplete.argumentPrefixes=
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/MyProgram/Java/JDK/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/MyProgram/MyEclipse/Common/binary/com.sun.java.jdk.win32.x86_64_1.6.0.013/src.zip
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.codeComplete.staticFieldSuffixes=
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/MyProgram/Java/JDK/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/MyProgram/MyEclipse/Common/binary/com.sun.java.jdk.win32.x86_64_1.6.0.013/jre/lib/rt.jar
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.codeComplete.staticFinalFieldSuffixes=
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
