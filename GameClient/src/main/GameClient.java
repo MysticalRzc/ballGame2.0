@@ -22,28 +22,33 @@ public class GameClient {
 	private static int clientStap = 1;// 记录客户端运行到第几步
 
 	public static void StartClient() {
+	//after finish configuration, then start some function on client
 		if (clientStap == 1)
 			if (isUdpCommunication) {
 				udpComm.receive();
 				clientStap = 2;
-				while (true) {
-					udpComm.send("UC0000newClient000" + address + "#"
-							+ recePort);
-					try {
-						Thread.sleep(2);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
+//				while (true) {
+//					udpComm.send("UC0000newClient000" + address + "#"
+//							+ recePort);
+//					try {
+//						Thread.sleep(2);
+//					} catch (InterruptedException e) {
+//						e.printStackTrace();
+//					}
+//				}
+				System.out.println("GameClient start successful");
 			} else {
+				System.out.println("GameClient start successful");
 			}
 	}
 
 	public static void buildClientByDefault() {
+		//build client use default address and port, Use this function to make test quickly
 		udpComm.buildUdpCommunication(address, sendPort, recePort);
 	}
 
 	public static void buildClient() {
+		//build client user will input address sendPort and receivePort or other configuration.
 		String regEx = "^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$";
 		Pattern p = Pattern.compile(regEx);
 
@@ -70,8 +75,7 @@ public class GameClient {
 					throw new Exception();
 				break;
 			} catch (Exception e) {
-				System.out
-						.println("Error port must between 0 and 65535,Please again");
+				System.out.println("Error port must between 0 and 65535,Please again");
 			}
 		}
 		clientStap = 1;
@@ -79,4 +83,21 @@ public class GameClient {
 		System.out.println("Build Server successful!!");
 	}
 
+	public static void commTest() {
+		//test communication mode test send and receive
+		System.out.println("commTest start");
+		if(clientStap==2)
+		{
+			Scanner sc = new Scanner(System.in);
+			while (true) {
+				String com = sc.nextLine();
+				udpComm.send(com);
+				System.out.println("send message: " + com);
+			}
+		}
+	}
+	public static void messageRece(String mesId) {
+		System.out.println("receive message");
+		System.out.println(mesId + "##" + messBuff.getMessage(mesId));
+	}
 }

@@ -1,0 +1,21 @@
+package tests;
+
+public class test {
+
+	static{
+		System.out.println("static");
+	}
+	static t t = new t();
+	public static void main(String[] args) {
+		System.out.println("main");
+	}
+
+}
+
+class t{
+	
+	public t()
+	{
+		System.out.println("test");
+	}
+}

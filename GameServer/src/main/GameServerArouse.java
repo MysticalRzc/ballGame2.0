@@ -6,8 +6,9 @@ public class GameServerArouse extends MessageArouse {
 
 	@Override
 	public void Arouse(String mesId) {
-		if(mesId.compareTo("u_Client") == 0)
-			GameServer.BuildClientThread();
+		GameServer.messageRece(mesId);
+//		if(mesId.compareTo("u_Client") == 0)
+//			GameServer.BuildClientThread();
 	}
 
 }

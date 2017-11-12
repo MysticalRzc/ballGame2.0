@@ -35,17 +35,10 @@ public class MessageBuffer {
 			@Override
 			public void run() {
 				synchronized (mesIdQue) {
-					System.out.println("Message listen is running");
+					System.out.println("MessageBuffer listen is running");
 					while (!this.isInterrupted()) {
 						if (!mesIdQue.isEmpty()) {
-							{
-								messArouse.Arouse(mesIdQue.poll());
-								try {
-									Thread.sleep(1);
-								} catch (InterruptedException e) {
-									e.printStackTrace();
-								}
-							}
+							messArouse.Arouse(mesIdQue.poll());			//唤醒队列中存放的是mesid每个message唤醒一次后就出队列，但消息还在messBuffr里
 						} else {
 							try {
 								Thread.sleep(50);
@@ -73,7 +66,7 @@ public class MessageBuffer {
 		}
 		mesIdQue.add(mesId);
 		messBuffer.get(mesId).add(message);
-		System.out.println("new message>>"+mesIdQue.size());
+//		System.out.println("new message>>" + mesIdQue.size());
 	}
 
 	public String getMessage(String mesId) {

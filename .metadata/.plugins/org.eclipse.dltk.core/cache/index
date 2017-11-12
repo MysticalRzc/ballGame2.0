@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cache:CacheIndex xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cache="http://eclipse.org/dltk/cache_model" environment="org.eclipse.dltk.core.environment.localEnvironment">
+  <entries path="E:/MyProject/GamePlatform/WebRoot/js/jquery.min.js" timestamp="1508902064121" lastAccessTime="1509033659337"/>
+  <entries path="E:/MyProject/GamePlatform/WebRoot/js/html5shiv.js" timestamp="1508902064115" lastAccessTime="1509033659626"/>
+  <entries path="E:/MyProject/GamePlatform/WebRoot/js/jquery-ui.min.js" timestamp="1508902064118" lastAccessTime="1509033659704"/>
+  <entries path="E:/MyProject/GamePlatform/WebRoot/js/jquery.pager.js" timestamp="1508902064122" lastAccessTime="1509033660080"/>
+  <entries path="E:/MyProject/GamePlatform/WebRoot/js/jquery-1.8.2.min.js" timestamp="1508902064116" lastAccessTime="1509033660203"/>
+  <entries path="E:/MyProject/GamePlatform/WebRoot/js/jquery.idealforms.js" timestamp="1508902064120" lastAccessTime="1509033660566"/>
+  <entries path="E:/MyProject/GamePlatform/WebRoot/js/login.js" timestamp="1508902064122" lastAccessTime="1509033661190"/>
+</cache:CacheIndex>

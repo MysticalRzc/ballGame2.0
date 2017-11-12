@@ -1,5 +1,0 @@
-package messageBuffer;
-
-public abstract class MessageArouse {
-	public static abstract void Arouse(String mesId);
-}

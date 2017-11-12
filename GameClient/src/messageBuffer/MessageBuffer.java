@@ -6,13 +6,21 @@ import java.util.Map;
 import java.util.Queue;
 
 public class MessageBuffer {
+	/**
+	 * LinkedBlockingQueue 后续需要把Queue切换成这个阻塞队列
+	 */
 	final private Map<String, Queue> messBuffer = new HashMap<String, Queue>();
 	final private Queue<String> mesIdQue = new LinkedList<String>();
 	private MessageArouse messArouse;
 	private Thread mesListener;
 
+	public MessageBuffer() {
+		messageListener();
+	}
+
 	public MessageBuffer(MessageArouse messArouse) {
 		this.messArouse = messArouse;
+		messageListener();
 	}
 
 	public int getSize() {
@@ -27,9 +35,10 @@ public class MessageBuffer {
 			@Override
 			public void run() {
 				synchronized (mesIdQue) {
-					while (this.isInterrupted()) {
+					System.out.println("MessageBuffer listen is running");
+					while (!this.isInterrupted()) {
 						if (!mesIdQue.isEmpty()) {
-							messArouse.Arouse(mesIdQue.poll());
+							messArouse.Arouse(mesIdQue.poll());			//唤醒队列中存放的是mesid每个message唤醒一次后就出队列，但消息还在messBuffr里
 						} else {
 							try {
 								Thread.sleep(50);
@@ -51,20 +60,18 @@ public class MessageBuffer {
 	}
 
 	public void setMessage(String mesId, String message) {
-		System.out.println("MessageBuffer receive： " + message);
+		// System.out.println("MessageBuffer receive： " + message);
 		if (!messBuffer.containsKey(mesId)) {
 			messBuffer.put(mesId, new LinkedList<String>());
 		}
 		mesIdQue.add(mesId);
 		messBuffer.get(mesId).add(message);
+//		System.out.println("new message>>" + mesIdQue.size());
 	}
 
 	public String getMessage(String mesId) {
-		String message;
-
 		if (!messBuffer.containsKey(mesId))
 			return null;
-		message = (String) messBuffer.get(mesId).poll();
-		return message;
+		return (String) messBuffer.get(mesId).poll();
 	}
 }

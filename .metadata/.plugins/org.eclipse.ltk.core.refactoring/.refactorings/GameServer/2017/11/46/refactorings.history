@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;messageBuffer&apos; to &apos;GameClient/src/messageBuffer&apos;&#x0D;&#x0A;- Original project: &apos;GameServer&apos;&#x0D;&#x0A;- Destination element: &apos;GameClient/src/messageBuffer&apos;&#x0D;&#x0A;- Original element: &apos;GameServer/src/messageBuffer&apos;" description="Copy package" destination="=GameClient/src&lt;messageBuffer" element1="/src&lt;messageBuffer" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1510497293316" version="1.0"/>
+</session>

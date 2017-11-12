@@ -28,8 +28,9 @@ public class GameServer {
 		if (serverStap == 1) {
 			udpComm.receive();
 			serverStap = 2;
+			System.out.println("GameServer start successful");
 		} else
-			System.out.println("server is not build");
+			System.out.println("GameServer start failed");
 	}
 
 	public static void BuildServerByDefault() {
@@ -78,5 +79,23 @@ public class GameServer {
 
 	public static void BuildClientThread() {
 		ClientThread clientTh = new ClientThread();
+	}
+	public static void commTest() {
+		//test communication mode test send and receive
+		System.out.println("commTest start");
+		if(serverStap==2)
+		{
+			Scanner sc = new Scanner(System.in);
+			while (true) {
+				String com = sc.nextLine();
+				udpComm.send(com);
+				System.out.println("send message: " + com);
+			}
+		}
+	}
+
+	public static void messageRece(String mesId) {
+		System.out.println("receive message");
+		System.out.println(mesId + "##" + messBuff.getMessage(mesId));
 	}
 }

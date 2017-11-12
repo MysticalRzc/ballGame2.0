@@ -26,7 +26,7 @@ public class UdpSendFunction {
 		try {
 			pack = new DatagramPacket(data, data.length,InetAddress.getByName(address), port);
 			dSocket.send(pack);
-			System.out.println("Send:"+message);
+//			System.out.println("Send:"+message);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

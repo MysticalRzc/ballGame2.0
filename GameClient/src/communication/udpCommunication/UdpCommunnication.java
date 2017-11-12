@@ -34,8 +34,12 @@ public class UdpCommunnication {
 				this.reTh.interrupt();
 			this.reTh = new UdpReceiveThread(recePort);
 			this.seFun = new UdpSendFunction(address, sendPort);
+			System.out.println("build udpCommunication successful");
+			System.out.println("address: "+address + "\nsendPort: " + sendPort + "\nrecePort: " + recePort);
+			System.out.println("=======================================================");
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("build udpCommunication failed");
 		}
 	}
 
@@ -68,8 +72,9 @@ public class UdpCommunnication {
 	}
 
 	static protected void setMessage(String message) { // kid visited only
-		GameClient.messBuff.setMessage(message.substring(0, 8),
-				message.substring(8));
+		if(message.length()>16)
+		GameClient.messBuff.setMessage(message.substring(0, 16),
+				message.substring(16));
 	}
 
 	public void checkAddPort(String address, int sendPort, int recePort)

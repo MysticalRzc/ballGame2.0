@@ -1,4 +1,4 @@
-#Thu Oct 19 10:27:46 CST 2017
+#Tue Nov 07 17:12:18 CST 2017
 org.eclipse.jdt.core.codeComplete.fieldSuffixes=
 org.eclipse.jdt.core.codeComplete.localSuffixes=
 org.eclipse.jdt.core.compiler.compliance=1.6
@@ -9,11 +9,13 @@ eclipse.preferences.version=1
 org.eclipse.jdt.core.codeComplete.staticFinalFieldPrefixes=
 org.eclipse.jdt.core.codeComplete.fieldPrefixes=
 org.eclipse.jdt.core.codeComplete.argumentSuffixes=
+org.eclipse.jdt.core.classpathVariable.MYECLIPSE_LIB_HOME=C\:/MyProgram/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.0.0.me201110301321/data/libraryset
 org.eclipse.jdt.core.codeComplete.argumentPrefixes=
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/MyProgram/MyEclipse/Common/binary/com.sun.java.jdk.win32.x86_64_1.6.0.013/src.zip
+org.eclipse.jdt.core.classpathVariable.MYECLIPSE_HIBERNATE_DATA_HOME=C\:/MyProgram/MyEclipse/MyEclipse 10/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/MyProgram/Java/JDK/src.zip
 org.eclipse.jdt.core.codeComplete.staticFieldSuffixes=
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/MyProgram/MyEclipse/Common/binary/com.sun.java.jdk.win32.x86_64_1.6.0.013/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/MyProgram/Java/JDK/jre/lib/rt.jar
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.codeComplete.staticFinalFieldSuffixes=
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=

@@ -26,9 +26,9 @@ public class UdpReceiveThread extends Thread{
 			
 			while(!this.isInterrupted())
 			{
-				System.out.println("is waiting...");
+//				System.out.println("is waiting...");
 				socket.receive(pack);
-//				System.out.println("receive : " +new String(buf,0,pack.getLength()));
+//				System.out.println("Udp receive : " +new String(buf,0,pack.getLength()));
 				UdpCommunnication.setMessage(new String(buf,0,pack.getLength()));
 			}
 			
