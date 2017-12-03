@@ -28,3 +28,9 @@
 	修改了控制台输出提示，更加简洁。取消了udp发送和接受的消息提示，但保留了messageBuffer启动的提示。
 	messageBuffer消息写入增加限制，对消息长度小于16的消息不予放入消息缓存队列。
 	需要添加消息级别，并对其验证。
+2017-11-14
+	为GameServer和GameClient添加了mode数据层，并把ip地址和端口号的校验放在了mode层
+	编写了服务器ClientId和TableId分配模块，client启动后会想服务器发送一条ClientId获取请求。
+	将Server和Client的mode独立出来，需求说明书添加了一条ClientId请求
+	ClientId获取请求Server并没有相应的回复操作需要继续编写
+	

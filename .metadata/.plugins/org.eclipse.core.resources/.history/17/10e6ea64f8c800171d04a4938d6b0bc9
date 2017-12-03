@@ -1,0 +1,62 @@
+package main;
+
+public class GameClientMode {
+	//默认 default 支队同一包下的类信息可见
+	private static String address = "127.0.0.1";
+	private static int sendPort = 12999;
+	private static int recePort = 12666;
+	
+	private static int clientId;
+	private static String userName;
+	
+	private static int tableId;
+
+	static String getAddress() {
+		return address;
+	}
+
+	static void setAddress(String address) {
+		GameClientMode.address = address;
+	}
+
+	static int getSendPort() {
+		return sendPort;
+	}
+
+	static void setSendPort(int sendPort) {
+		GameClientMode.sendPort = sendPort;
+	}
+
+	static int getRecePort() {
+		return recePort;
+	}
+
+	static void setRecePort(int recePort) {
+		GameClientMode.recePort = recePort;
+	}
+
+	static int getClientId() {
+		return clientId;
+	}
+
+	static void setClientId(int clientId) {
+		GameClientMode.clientId = clientId;
+	}
+
+	static String getUserName() {
+		return userName;
+	}
+
+	static void setUserName(String userName) {
+		GameClientMode.userName = userName;
+	}
+
+	static int getTableId() {
+		return tableId;
+	}
+
+	static void setTableId(int tableId) {
+		GameClientMode.tableId = tableId;
+	}
+	
+}

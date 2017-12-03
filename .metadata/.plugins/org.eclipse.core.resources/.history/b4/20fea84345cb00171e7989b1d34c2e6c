@@ -1,0 +1,17 @@
+import org.junit.Test;
+
+
+public class main {
+
+	/**
+	 * @param args
+	 * @throws InterruptedException 
+	 */
+	@Test
+	public void test()
+	{
+		 int a = -1;
+		 String str = String.format("%4d", a);
+		System.out.println(str);
+	}
+}

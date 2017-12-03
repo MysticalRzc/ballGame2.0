@@ -34,7 +34,7 @@ public class UdpCommunnication {
 				this.reTh.interrupt();
 			this.reTh = new UdpReceiveThread(recePort);
 			this.seFun = new UdpSendFunction(address, sendPort);
-			System.out.println("build udpCommunication successful");
+			System.out.println("==========build udpCommunication successful============");
 			System.out.println("address: "+address + "\nsendPort: " + sendPort + "\nrecePort: " + recePort);
 			System.out.println("=======================================================");
 		} catch (Exception e) {

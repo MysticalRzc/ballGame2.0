@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 
 public class main {
 
@@ -5,13 +7,11 @@ public class main {
 	 * @param args
 	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) throws InterruptedException {
-		Client c = new Client();
-		Server s = new Server();
-		c.start();
-		s.start();
-		c.join();
-		s.join();
+	@Test
+	public void test()
+	{
+		 int a = -1554;
+		 String str = String.format("%04d", a);
+		System.out.println(str);
 	}
-
 }

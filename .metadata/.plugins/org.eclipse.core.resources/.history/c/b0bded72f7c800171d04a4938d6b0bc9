@@ -1,0 +1,13 @@
+package main;
+
+public class GameClientMode {
+	//默认 default 支队同一包下的类信息可见
+	static String address = "127.0.0.1";
+	static int sendPort = 12999;
+	static int recePort = 12666;
+	
+	static int clientId;
+	static String userName;
+	
+	static int tableId;
+}

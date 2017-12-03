@@ -8,6 +8,7 @@ import main.GameClient;
 
 public class clientCommand {
 	final private static GameClient gameClient = new GameClient();
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		// test
@@ -21,7 +22,11 @@ public class clientCommand {
 				GameClient.buildClient();
 			} else if (com.compareTo("startclient") == 0) {
 				GameClient.StartClient();
-			} else if (com.compareTo("commtest") == 0) {
+			}else if(com.compareTo("showinfor")==0){
+				GameClient.showInfor();
+			}
+			
+			else if (com.compareTo("commtest") == 0) {
 				GameClient.commTest();
 			}
 		}

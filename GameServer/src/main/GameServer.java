@@ -19,9 +19,6 @@ public class GameServer {
 	final private static UdpCommunnication udpComm = new UdpCommunnication();
 	private static boolean isUdpCommunication = true;
 
-	private static String address = "127.0.0.1";
-	private static int sendPort = 12666;
-	private static int recePort = 12999;
 	private static int serverStap = 1; // 记录服务器运行到第几步
 
 	public static void StartServer() {
@@ -34,43 +31,28 @@ public class GameServer {
 	}
 
 	public static void BuildServerByDefault() {
-		udpComm.buildUdpCommunication(address, sendPort, recePort);
+		System.out.println("Build server by default start ");
+		udpComm.buildUdpCommunication(GameServerMode.getAddress(),
+				GameServerMode.getSendPort(), GameServerMode.getRecePort());
 	}
 
 	public static void BuildServer() {
-		String regEx = "^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\.(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$";
-		Pattern p = Pattern.compile(regEx);
-
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Set address");
 
-		while ((address = sc.nextLine()) != null) {
-			Matcher m = p.matcher(address);
-			if (m.find()) {
-				break;
+		if (GameServerMode.setAddress(sc.nextLine())) {
+			if (GameServerMode.setRecePort(sc.nextInt())
+					&& GameServerMode.setSendPort(sc.nextInt())) {
+				udpComm.buildUdpCommunication(GameServerMode.getAddress(),
+						GameServerMode.getSendPort(),
+						GameServerMode.getRecePort());
+				serverStap = 1;
+				System.out.println("Build Server successful!!");
+			} else {
+				System.out.println("Error with port");
 			}
-			System.out.println("Error address Please Check and set again");
-		}
-
-		System.out.println("Set sendPort and recePort");
-		while (true) {
-			String str1 = sc.nextLine();
-			String str2 = sc.nextLine();
-			try {
-				sendPort = Integer.parseInt(str1);
-				recePort = Integer.parseInt(str2);
-				if ((sendPort < 0 || recePort >= 65535)
-						&& (sendPort < 0 || recePort >= 65535))
-					throw new Exception();
-				break;
-			} catch (Exception e) {
-				System.out
-						.println("Error port must between 0 and 65535,Please again");
-			}
-		}
-		serverStap = 1;
-		udpComm.buildUdpCommunication(address, sendPort, recePort);
-		System.out.println("Build Server successful!!");
+		} else
+			System.out.println("Error with address");
 	}
 
 	public static void BuildClientThread(Socket socket) {
@@ -78,13 +60,16 @@ public class GameServer {
 	}
 
 	public static void BuildClientThread() {
-		ClientThread clientTh = new ClientThread();
+//		ClientThread clientTh = new ClientThread();
+		messBuff.getMessage("");
+		int clientId = GameServerMode.getgIdManage().getClientId();
+		
 	}
+
 	public static void commTest() {
-		//test communication mode test send and receive
+		// test communication mode test send and receive
 		System.out.println("commTest start");
-		if(serverStap==2)
-		{
+		if (serverStap == 2) {
 			Scanner sc = new Scanner(System.in);
 			while (true) {
 				String com = sc.nextLine();
@@ -96,6 +81,6 @@ public class GameServer {
 
 	public static void messageRece(String mesId) {
 		System.out.println("receive message");
-		System.out.println(mesId + "##" + messBuff.getMessage(mesId));
+		System.out.println(mesId + " : " + messBuff.getMessage(mesId));
 	}
 }

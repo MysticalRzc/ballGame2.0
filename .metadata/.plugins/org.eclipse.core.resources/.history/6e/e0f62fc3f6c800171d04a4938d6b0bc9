@@ -1,0 +1,11 @@
+package main;
+
+public class GameClientMode {
+	//默认 default 支队同一包下的类信息可见
+	String address;
+	int sendPort;
+	int recePort;
+	
+	int clientId;
+	String userName;
+}

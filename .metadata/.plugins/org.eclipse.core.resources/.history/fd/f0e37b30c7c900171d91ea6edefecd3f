@@ -1,0 +1,5 @@
+package clientManage;
+
+public class ClientMode {
+
+}
