@@ -33,4 +33,5 @@
 	编写了服务器ClientId和TableId分配模块，client启动后会想服务器发送一条ClientId获取请求。
 	将Server和Client的mode独立出来，需求说明书添加了一条ClientId请求
 	ClientId获取请求Server并没有相应的回复操作需要继续编写
-	
+2017-12-03
+	编译器换成Idea14.1,jdk也升级成1.8

@@ -10,5 +10,4 @@ public class GameServerArouse extends MessageArouse {
 		if(mesId.compareTo("U7T#0001getCliId") == 0)
 			GameServer.BuildClientThread();
 	}
-
 }

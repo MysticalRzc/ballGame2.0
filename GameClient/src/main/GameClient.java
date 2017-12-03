@@ -16,7 +16,7 @@ public class GameClient {
 	final private static UdpCommunnication udpComm = new UdpCommunnication();
 	private static boolean isUdpCommunication = true;
 
-	private static int clientStap = 1;// 记录客户端运行到第几步
+	private static int clientStap = 0;// 记录客户端运行到第几步
 
 	public static void StartClient() {
 		// after finish configuration, then start some function on client
@@ -85,5 +85,8 @@ public class GameClient {
 	public static void messageRece(String mesId) {
 		System.out.println("receive message");
 		System.out.println(mesId + "##" + messBuff.getMessage(mesId));
+	}
+	public static int getClientStap(){
+		return clientStap;
 	}
 }
