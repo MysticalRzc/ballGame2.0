@@ -1,0 +1,45 @@
+package mystical.com.communication.udpCommunication;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+public class UdpSendFunction {
+
+	final private DatagramSocket dSocket;
+	private String address;
+	private int port;
+
+	public UdpSendFunction(String address, int port) throws SocketException {
+		super();
+		this.address = address;
+		this.port = port;
+		dSocket = new DatagramSocket();
+	}
+
+	public void sendMessage(String message){
+		byte[] data = message.getBytes();
+		DatagramPacket pack;
+		try {
+			pack = new DatagramPacket(data, data.length,InetAddress.getByName(address), port);
+			dSocket.send(pack);
+//			System.out.println("Send:"+message);
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+
+}
