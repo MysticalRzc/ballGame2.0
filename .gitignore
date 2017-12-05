@@ -1,5 +1,9 @@
 *.class
 workspace.xml
 *.iml
+<<<<<<< HEAD
+=======
+.idea
+>>>>>>> 3e242e40ee1bfa3c5b3da78ef730e53c0c58715f
 .classpath
 .project
