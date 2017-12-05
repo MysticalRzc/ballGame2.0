@@ -1,3 +1,5 @@
 *.class
 workspace.xml
 *.iml
+.classpath
+.project
