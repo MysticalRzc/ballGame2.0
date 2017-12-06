@@ -32,8 +32,8 @@ public class GameServer {
 
     public static void BuildServerByDefault() {
         System.out.println("Build server by default start ");
-        udpComm.buildUdpCommunication(GameServerMode.getAddress(),
-                GameServerMode.getSendPort(), GameServerMode.getRecePort());
+        if (udpComm.buildUdpCommunication(GameServerMode.getAddress(), GameServerMode.getSendPort(), GameServerMode.getRecePort()))
+            serverStap = 1;
     }
 
     public static void BuildServer() {

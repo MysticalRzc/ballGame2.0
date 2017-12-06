@@ -28,19 +28,21 @@ public class UdpCommunnication {
 		}
 	}
 
-	public void buildUdpCommunication(String address, int sendPort, int recePort) {
+	public boolean buildUdpCommunication(String address, int sendPort, int recePort) {
 		try {
 			this.checkAddPort(address, sendPort, recePort);
 			if (this.reTh != null && this.reTh.isAlive() == true)
 				this.reTh.interrupt();
 			this.reTh = new UdpReceiveThread(recePort);
 			this.seFun = new UdpSendFunction(address, sendPort);
-			System.out.println("build udpCommunication successful");
+			System.out.println("=========build udpCommunication successful=============");
 			System.out.println("address: "+address + "\nsendPort: " + sendPort + "\nrecePort: " + recePort);
 			System.out.println("=======================================================");
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("build udpCommunication failed");
+			System.out.println("==========build udpCommunication failed================");
+			return false;
 		}
 	}
 

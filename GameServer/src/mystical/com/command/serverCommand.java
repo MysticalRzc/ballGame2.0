@@ -14,12 +14,22 @@ public class serverCommand {
 		while (true) {
 			String com = sc.nextLine();
 			com = com.toLowerCase();
-			if (com.compareTo("buildserver") == 0) {
-				GameServer.BuildServer();
-			} else if (com.compareTo("startserver") == 0) {
-				GameServer.StartServer();
-			}else if(com.compareTo("commtest") == 0){
-				GameServer.commTest();
+			switch(com)
+			{
+				case "buildserver":
+					GameServer.BuildServer();
+					break;
+				case "buildserverbydefault":
+					GameServer.BuildServerByDefault();
+					break;
+				case "startserver":
+					GameServer.StartServer();
+					break;
+				case "commtest":
+					GameServer.commTest();
+					break;
+				default:
+					System.out.println("Null Commend");
 			}
 		}
 	}
