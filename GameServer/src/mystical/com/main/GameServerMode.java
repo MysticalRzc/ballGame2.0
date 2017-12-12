@@ -1,9 +1,11 @@
 package mystical.com.main;
 
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import mystical.com.ClientThread.ClientThread;
 import mystical.com.clientManage.GameIdManage;
 
 public class GameServerMode {
@@ -11,10 +13,12 @@ public class GameServerMode {
 	private static int sendPort = 12666;
 	private static int recePort = 12999;
 
-	private static int serverId;
+	private static String serverId = "0001";
 	private static String serverName;
 	
 	private static GameIdManage gIdManage = new GameIdManage();  // clientNum  clientId
+
+	static Map<String,ClientThread> clientThreadList = new HashMap<String,ClientThread>();
 
 	static String getAddress() {
 		return address;
@@ -55,11 +59,11 @@ public class GameServerMode {
 			return false;
 	}
 
-	static int getServerId() {
+	static String getServerId() {
 		return serverId;
 	}
 
-	static void setServerId(int serverId) {
+	static void setServerId(String serverId) {
 		GameServerMode.serverId = serverId;
 	}
 

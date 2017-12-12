@@ -10,6 +10,7 @@ import mystical.com.ClientThread.ClientThread;
 
 import mystical.com.communication.tcpCommunication.TcpCommunication;
 import mystical.com.communication.udpCommunication.UdpCommunnication;
+import mystical.com.utill.Utill;
 
 public class GameServer {
 
@@ -59,12 +60,15 @@ public class GameServer {
         ClientThread clientTh = new ClientThread(socket);
     }
 
-    public static void BuildClientThread() {
+    public static boolean BuildClientThread() {
 //		mystical.com.ClientThread clientTh = new mystical.com.ClientThread();
-        messBuff.getMessage("");
-        String address;
+        String message = messBuff.getMessage("U7T#+" + GameServerMode.getServerId() + "+getCliId");
         int port = 0001;
-        int clientId = GameServerMode.getgIdManage().getClientId("String", port);
+        String[] mes = message.split("#");
+        if (Utill.isAddress(mes[0]) && Utill.isPort(mes[1])) {
+            port = Integer.parseInt(mes[1]);
+            int clientId = GameServerMode.getgIdManage().getClientId(mes[0], port);
+        }
     }
 
     public static void commTest() {
